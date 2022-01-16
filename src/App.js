@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
+  const [click, setClick] = useState(0);
   return (
     <div>
-      App Placeholder
+      <h1>{click}</h1>
+      <button onClick={() => setClick(click + 1)} type="button"> Click</button>
     </div>
   );
 }
